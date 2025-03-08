@@ -1,0 +1,104 @@
+/* Main Page CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: scroll;
+    background-color: rgba(221, 221, 221, 0.795);
+}
+
+.main {
+    height: 100vh;
+}
+
+
+/* Header CSS */
+.header {
+    display: flex;
+    column-gap: 75px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px 0;
+    background: url("../assets/panel.jpg");
+    background-size: cover;
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+/* Blur Effect When Hover To Link */
+.header:has(a:hover) a:not(:hover) {
+    filter: blur(6px);
+}
+
+
+/* Saved Notes Section */
+.headings {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.headings h1 {
+    text-decoration: underline;
+}
+
+#saved-notes {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    white-space: pre-wrap;
+}
+
+#saved-notes div {
+    border: 3px solid transparent;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 80%;
+    transition: transform 0.3s ease;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px rgba(5, 5, 5, 0.9);
+}
+
+#saved-notes div:hover {
+    transform: scale(1.1);
+    animation: borderAnimation 4s ease infinite;
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+#saved-notes b {
+    font-size: 20px;
+}
+
+#saved-notes span {
+    display: inline-block;
+}
+
+/* Border Animation */
+@keyframes borderAnimation {
+    0% { border-color: rgb(41, 41, 139); }
+    50% { border-color: rgb(16, 84, 116); }
+    100% { border-color: #063ca1; }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .main {
+        height: 100%;
+    }
+
+    .header {
+        column-gap: 18px;
+    }
+}

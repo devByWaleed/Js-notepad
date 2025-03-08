@@ -1,0 +1,65 @@
+/* Main Page CSS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+
+/* Main Container CSS */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.container:hover {
+    transform: scale(1.1);
+    animation: borderAnimation 4s ease infinite;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #555555;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Border Animation */
+@keyframes borderAnimation {
+    0% { border-color: rgb(41, 41, 139); }
+    50% { border-color: rgb(16, 84, 116); }
+    100% { border-color: #063ca1; }
+}
+
+/* Media Queries */
+@media screen and (max-width:1024px) {
+    .container {
+        width: 85%;
+        margin: 30px auto;
+    }
+}

@@ -1,0 +1,166 @@
+/* Main Page CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    column-gap: 14px;
+    height: 100vh;
+    background-color: rgba(221, 221, 221, 0.795);
+}
+
+
+/* Side Panel CSS */
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 16vw;
+    font-weight: 800;
+    border: 2px transparent;
+    background: url("../assets/panel.jpg");
+    background-size: cover;
+}
+
+.side-panel a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+}
+
+.side-panel a:hover {
+    text-decoration: underline;
+}
+
+/* Blur Effect When Hover To Link */
+.side-panel:has(a:hover) a:not(:hover) {
+    filter: blur(6px);
+}
+
+/* Note Section CSS */
+.text-area {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.text-area h1 {
+    text-decoration: underline;
+}
+
+.text-area input {
+    padding: 8px 25px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    outline: none;
+    border: 3px solid transparent;
+    border-bottom: 2px solid black;
+    box-shadow: 0 0 10px rgba(5, 5, 5, 0.445);
+}
+
+.text-area input:hover {
+    transform: scale(1.1);
+    animation: borderAnimation 4s ease infinite;
+}
+
+#text {
+    resize: none;
+    height: 65vh;
+    width: 80vw;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    border: 3px solid transparent;
+    transition: transform 0.5s ease;
+    box-shadow: 0 0 10px rgba(5, 5, 5, 0.445);
+}
+
+#text:hover {
+    animation: borderAnimation 4s ease infinite;
+}
+
+.text-area div {
+    display: flex;
+    column-gap: 10px;
+}
+
+.text-area button {
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 3px solid transparent;
+    border-style: ridge;
+    transition: transform 0.3s ease;
+    color: black;
+    box-shadow: 0 0 10px rgba(5, 5, 5, 0.5);
+    background: linear-gradient(90deg, rgba(171, 171, 171, 1) 0%, rgba(231, 228, 227, 1) 100%);
+}
+
+.text-area button:hover {
+    transform: scale(1.1);
+    animation: borderAnimation 4s ease infinite;
+    color: whitesmoke;
+    background: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+/* Border Animation */
+@keyframes borderAnimation {
+    0% { border-color: rgb(41, 41, 139); }
+    50% { border-color: rgb(16, 84, 116); }
+    100% { border-color: #063ca1; }
+}
+
+
+/* Media Queries For Mobile Screens */
+@media screen and (max-width: 768px) {
+    .side-panel {
+        row-gap: 40px;
+        width: 25%;
+        height: 100%;
+    }
+
+    .side-panel a {
+        font-size: 14px;
+    }
+
+    #text {
+        width: 68vw;
+    }
+
+    .main .text-area {
+        padding: 15px 0;
+    }
+
+    .text-area input {
+        padding: 8px 6px;
+    }
+
+    .text-area button {
+        padding: 10px 15px;
+    }
+}
+
+
+/* Media Queries For Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .side-panel {
+        width: 28%;
+        height: 100%;
+        row-gap: 40px;
+    }
+
+    #text {
+        width: 68vw;
+    }
+}

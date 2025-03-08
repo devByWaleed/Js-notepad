@@ -1,0 +1,117 @@
+/* Main Page CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(211, 208, 208);
+}
+
+
+/* Header CSS */
+.header {
+    display: flex;
+    column-gap: 75px;
+    justify-content: center;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: url("../assets/panel.jpg");
+    background-size: cover;
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+/* Blur Effect When Hover To Link */
+.header:has(a:hover) a:not(:hover) {
+    filter: blur(6px);
+}
+
+
+/* Delete The Note Section CSS */
+.delete-section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    padding: 15px;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.delete-section:hover {
+    transform: scale(1.1);
+    animation: borderAnimation 4s ease infinite;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.delete-section h1 {
+    text-decoration: underline;
+}
+
+.delete-section p {
+    padding: 0 10px;
+}
+
+input {
+    padding: 8px 10px;
+    outline: none;
+    border: transparent;
+    border-bottom: 2px solid black;
+}
+
+#delBtn {
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: transparent;
+    border-style: ridge;
+    transition: transform 0.3s ease;
+    color: black;
+    background: linear-gradient(90deg, rgba(171, 171, 171, 1) 0%, rgba(231, 228, 227, 1) 100%);
+    box-shadow: 5px 5px 10px rgb(66, 66, 66);
+}
+
+#delBtn:hover {
+    transform: scale(1.1);
+    animation: borderAnimation 4s ease infinite;
+    color: whitesmoke;
+    background: black;
+}
+
+/* Border Animation */
+@keyframes borderAnimation {
+    0% { border-color: rgb(41, 41, 139); }
+    50% { border-color: rgb(16, 84, 116); }
+    100% { border-color: #063ca1; }
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .delete-section {
+        width: 90%;
+        margin: auto;
+    }
+
+    .header {
+        column-gap: 18px;
+    }
+}
