@@ -24,7 +24,7 @@ The JavaScript Notepad Project is a simple, web-based application that provides 
 
 
 **Usage:**
-1. Access the notepad application through the web browser. https://waleed1857.github.io/Js-notepad/
+1. Access the notepad application through the web browser. https://devByWaleed.github.io/Js-notepad/
 2. Go to respective section through homepage.
 3. Create a note by writing text with a specific key to store it.
 4. Save the content by clicking the **Save** button.
